@@ -33,8 +33,8 @@
 )
 
 #let bit_manipulation_items = (
-  ("counting bits", false),
-  ("highest set bit", false),
+  ("counting bits", true),
+  ("highest set bit", true),
   ("n bits gray code", false),
   ("sum of two integers", false),
 )
@@ -112,7 +112,7 @@
 #let dynamic_programming_items = (
   ("coin change", false),
   ("egg dropping", false),
-  ("fibonacci", false),
+  ("fibonacci", true),
   ("fractional knapsack", false),
   ("is subsequence", false),
   ("knapsack", false),
@@ -145,6 +145,7 @@
   ("kadane algorithm", false),
   ("kmeans", false),
   ("mex", false),
+  ("two sum", true),
 )
 
 #let geometry_items = (
@@ -203,8 +204,8 @@
   ("hinge loss", false),
   ("huber loss", false),
   ("kl divergence loss", false),
-  ("mean absolute error loss", false),
-  ("mean squared error loss", false),
+  ("mean absolute error loss", true),
+  ("mean squared error loss", true),
   ("negative log likelihood", false),
 )
 
@@ -314,7 +315,6 @@
   ("heap", false),
   ("naive", false),
   ("steinhaus johnson trotter", false),
-  ("two sum", false),
 )
 
 #let searching_items = (
@@ -513,6 +513,11 @@
 #section_heading("General", general_items)
 #checklist(general_items)
 
+=== Permutation
+#checklist(permutations_items)
+
+#colbreak()
+
 #section_heading("Geometry", geometry_items)
 #checklist(geometry_items)
 
@@ -541,9 +546,6 @@
 
 #section_heading("Number Theory", number_theory_items)
 #checklist(number_theory_items)
-
-#section_heading("Permutations", permutations_items)
-#checklist(permutations_items)
 
 #section_heading("Searching", searching_items)
 #checklist(searching_items)
