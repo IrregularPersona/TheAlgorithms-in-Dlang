@@ -64,13 +64,13 @@
 )
 
 #let compression_items = (
-  ("move to front", false),
+  ("move to front", true),
   ("run length encoding", false),
 )
 
 #let conversions_items = (
-  ("binary to decimal", false),
-  ("binary to hexadecimal", false),
+  ("binary to decimal", true),
+  ("binary to hexadecimal", true),
   ("decimal to binary", false),
   ("decimal to hexadecimal", false),
   ("hexadecimal to binary", false),
