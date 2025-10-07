@@ -18,7 +18,7 @@ unittest {
 }
 
 void main() {
-    // demo ?
+    // demo
     writeln("abs(-5) = ", abs(-5));
     writeln("abs(5) = ", abs(5));
     writeln("abs(-3.14) = ", abs(-3.14));

@@ -152,10 +152,10 @@
   ("closest points", false),
   ("graham scan", false),
   ("jarvis scan", false),
-  ("point", false),
+  ("point", true),
   ("polygon points", false),
   ("ramer douglas peucker", false),
-  ("segment", false),
+  ("segment", true),
 )
 
 #let graph_items = (
@@ -218,8 +218,8 @@
   ("abs", true),
   ("aliquot sum", true),
   ("amicable numbers", false),
-  ("area of polygon", false),
-  ("area under curve", false),
+  ("area of polygon", true),
+  ("area under curve", true),
   ("armstrong number", false),
   ("average", true),
   ("baby step giant step", false),
