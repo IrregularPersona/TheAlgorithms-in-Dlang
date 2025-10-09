@@ -5,14 +5,13 @@
 )
 
 #set text(
-  font: "IBM Plex Mono",
+  font: "IBM Plex Sans",
   size: 10pt,
   fill: rgb("#e0e0e0"), // Light gray text
 )
 
 #set par(justify: true)
 
-// Define all checklist data as variables
 #let backtracking_items = (
   ("all combination of size k", false),
   ("graph coloring", true),
@@ -91,8 +90,8 @@
   ("hash table", false),
   ("heap", false),
   ("lazy segment tree", false),
-  ("linked list", false),
-  ("queue", false),
+  ("linked list", true),
+  ("queue", true),
   ("range minimum query", false),
   ("rb tree", false),
   ("segment tree recursive", false),
@@ -206,7 +205,7 @@
   ("kl divergence loss", false),
   ("mean absolute error loss", true),
   ("mean squared error loss", true),
-  ("negative log likelihood", false),
+  ("negative log likelihood", true),
 )
 
 #let optimization_items = (
@@ -217,7 +216,7 @@
 #let math_items = (
   ("abs", true),
   ("aliquot sum", true),
-  ("amicable numbers", false),
+  ("amicable numbers", true),
   ("area of polygon", true),
   ("area under curve", true),
   ("armstrong number", false),
@@ -527,7 +526,7 @@
 #section_heading("Greedy", greedy_items)
 #checklist(greedy_items)
 
-#section_heading("Machine Learning", machine_learning_items)
+#section_heading("Machine Learning", machine_learning_items + loss_function_items + optimization_items)
 #checklist(machine_learning_items)
 
 === Loss Function

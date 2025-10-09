@@ -3,34 +3,34 @@ import std.math : sqrt, pow;
 import std.algorithm : map, sum;
 import std.typecons : Tuple, tuple;
 
-Tuple!(double, double) linear_regression(Tuple!(double, double)[] data_points) {
-    if (data_points.length == 0) {
+Tuple!(double, double) linear_regression(Tuple!(double, double)[] dataPoints) {
+    if (dataPoints.length == 0) {
         return tuple(0.0, 0.0);
     }
 
-    double count = cast(double)data_points.length;
-    double mean_x = data_points.map!(p => p[0]).sum / count;
-    double mean_y = data_points.map!(p => p[1]).sum / count;
+    double count = cast(double)dataPoints.length;
+    double meanX = dataPoints.map!(p => p[0]).sum / count;
+    double meanY = dataPoints.map!(p => p[1]).sum / count;
 
     double covariance = 0.0;
-    double std_dev_sqr_x = 0.0;
-    double std_dev_sqr_y = 0.0;
+    double stdDevSqrX = 0.0;
+    double stdDevSqrY = 0.0;
 
-    foreach (point; data_points) {
+    foreach (point; dataPoints) {
         double x = point[0];
         double y = point[1];
-        covariance += (x - mean_x) * (y - mean_y);
-        std_dev_sqr_x += pow(x - mean_x, 2);
-        std_dev_sqr_y += pow(y - mean_y, 2);
+        covariance += (x - meanX) * (y - meanY);
+        stdDevSqrX += pow(x - meanX, 2);
+        stdDevSqrY += pow(y - meanY, 2);
     }
 
-    double std_dev_x = sqrt(std_dev_sqr_x);
-    double std_dev_y = sqrt(std_dev_sqr_y);
-    double std_dev_prod = std_dev_x * std_dev_y;
+    double stdDevX = sqrt(stdDevSqrX);
+    double stdDevY = sqrt(stdDevSqrY);
+    double stdDevProd = stdDevX * stdDevY;
 
-    double pcc = covariance / std_dev_prod;   // Pearson's correlation
-    double b = pcc * (std_dev_y / std_dev_x); // slope
-    double a = mean_y - b * mean_x;           // y-intercept
+    double pcc = covariance / stdDevProd;   // Pearson's correlation
+    double b = pcc * (stdDevY / stdDevX);   // slope
+    double a = meanY - b * meanX;           // y-intercept
     
     return tuple(a, b);
 }
